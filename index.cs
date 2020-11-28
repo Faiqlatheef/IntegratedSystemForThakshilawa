@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace IntegratedSystemThakshilawa
 {
-    public partial class Form1 : Form
+    public partial class index : Form
     {
-        public Form1()
+        public index()
         {
             InitializeComponent();
+        }
+
+        private void buttonLogin_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            routesForms.moveToLogin();
         }
     }
 }
