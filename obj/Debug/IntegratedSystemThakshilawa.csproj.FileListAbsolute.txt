@@ -9,3 +9,10 @@ C:\Users\Sajas\source\repos\IntegratedSystemThakshilawa\IntegratedSystemThakshil
 C:\Users\Sajas\source\repos\IntegratedSystemThakshilawa\IntegratedSystemThakshilawa\obj\Debug\IntegratedSystemThakshilawa.pdb
 C:\Users\Sajas\source\repos\IntegratedSystemThakshilawa\IntegratedSystemThakshilawa\obj\Debug\IntegratedSystemThakshilawa.index.resources
 C:\Users\Sajas\source\repos\IntegratedSystemThakshilawa\IntegratedSystemThakshilawa\obj\Debug\IntegratedSystemThakshilawa.Login.resources
+C:\Users\Sajas\source\repos\IntegratedSystemThakshilawa\IntegratedSystemThakshilawa\obj\Debug\IntegratedSystemThakshilawa.adminPanel.resources
+C:\Users\Sajas\source\repos\IntegratedSystemThakshilawa\IntegratedSystemThakshilawa\obj\Debug\IntegratedSystemThakshilawa.clerkPanel.resources
+C:\Users\Sajas\source\repos\IntegratedSystemThakshilawa\IntegratedSystemThakshilawa\obj\Debug\IntegratedSystemThakshilawa.hrPanel.resources
+C:\Users\Sajas\source\repos\IntegratedSystemThakshilawa\IntegratedSystemThakshilawa\obj\Debug\IntegratedSystemThakshilawa.managerPanel.resources
+C:\Users\Sajas\source\repos\IntegratedSystemThakshilawa\IntegratedSystemThakshilawa\obj\Debug\IntegratedSystemThakshilawa.ownerPanel.resources
+C:\Users\Sajas\source\repos\IntegratedSystemThakshilawa\IntegratedSystemThakshilawa\obj\Debug\IntegratedSystemThakshilawa.StudentPayment.resources
+C:\Users\Sajas\source\repos\IntegratedSystemThakshilawa\IntegratedSystemThakshilawa\obj\Debug\IntegratedSystemThakshilawa.StudentRegistration.resources

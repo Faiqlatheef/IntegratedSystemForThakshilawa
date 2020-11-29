@@ -29,13 +29,35 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(managerPanel));
+            this.buttonLogout = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // buttonLogout
+            // 
+            this.buttonLogout.Image = ((System.Drawing.Image)(resources.GetObject("buttonLogout.Image")));
+            this.buttonLogout.Location = new System.Drawing.Point(741, 12);
+            this.buttonLogout.Name = "buttonLogout";
+            this.buttonLogout.Size = new System.Drawing.Size(34, 23);
+            this.buttonLogout.TabIndex = 8;
+            this.buttonLogout.UseVisualStyleBackColor = true;
+            // 
+            // btnBack
+            // 
+            this.btnBack.Image = global::IntegratedSystemThakshilawa.Properties.Resources.back;
+            this.btnBack.Location = new System.Drawing.Point(25, 414);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(38, 24);
+            this.btnBack.TabIndex = 7;
+            this.btnBack.UseVisualStyleBackColor = true;
             // 
             // managerPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonLogout);
+            this.Controls.Add(this.btnBack);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "managerPanel";
             this.Text = "Manager Panel";
@@ -44,5 +66,8 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.Button buttonLogout;
+        private System.Windows.Forms.Button btnBack;
     }
 }

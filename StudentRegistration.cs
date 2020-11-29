@@ -10,16 +10,17 @@ using System.Windows.Forms;
 
 namespace IntegratedSystemThakshilawa
 {
-    public partial class adminPanel : Form
+    public partial class StudentRegistration : Form
     {
-        public adminPanel()
+        public StudentRegistration()
         {
             InitializeComponent();
         }
 
-        private void btnBacktoHome_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            routesForms.moveToClerkPanel();
         }
     }
 }
