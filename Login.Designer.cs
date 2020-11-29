@@ -29,10 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
-            this.btnBacktoHome = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.labelError = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonReset = new System.Windows.Forms.Button();
@@ -41,18 +39,10 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.comboBoxUserType = new System.Windows.Forms.ComboBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnBacktoHome = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnBacktoHome
-            // 
-            this.btnBacktoHome.Location = new System.Drawing.Point(12, 12);
-            this.btnBacktoHome.Name = "btnBacktoHome";
-            this.btnBacktoHome.Size = new System.Drawing.Size(75, 23);
-            this.btnBacktoHome.TabIndex = 0;
-            this.btnBacktoHome.Text = "Back";
-            this.btnBacktoHome.UseVisualStyleBackColor = true;
-            this.btnBacktoHome.Click += new System.EventHandler(this.btnBacktoHome_Click);
             // 
             // label3
             // 
@@ -74,15 +64,6 @@
             this.labelError.Name = "labelError";
             this.labelError.Size = new System.Drawing.Size(0, 13);
             this.labelError.TabIndex = 13;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(24, 104);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(209, 185);
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
             // 
             // label2
             // 
@@ -166,6 +147,25 @@
             this.comboBoxUserType.Name = "comboBoxUserType";
             this.comboBoxUserType.Size = new System.Drawing.Size(198, 21);
             this.comboBoxUserType.TabIndex = 8;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(24, 104);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(209, 185);
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnBacktoHome
+            // 
+            this.btnBacktoHome.Image = global::IntegratedSystemThakshilawa.Properties.Resources.back;
+            this.btnBacktoHome.Location = new System.Drawing.Point(12, 12);
+            this.btnBacktoHome.Name = "btnBacktoHome";
+            this.btnBacktoHome.Size = new System.Drawing.Size(75, 23);
+            this.btnBacktoHome.TabIndex = 0;
+            this.btnBacktoHome.UseVisualStyleBackColor = true;
+            this.btnBacktoHome.Click += new System.EventHandler(this.btnBacktoHome_Click);
             // 
             // Login
             // 
