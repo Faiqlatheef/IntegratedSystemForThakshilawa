@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace IntegratedSystemThakshilawa
 {
-    public partial class Form1 : Form
+    public partial class hrPanel : Form
     {
-        public Form1()
+        public hrPanel()
         {
             InitializeComponent();
         }

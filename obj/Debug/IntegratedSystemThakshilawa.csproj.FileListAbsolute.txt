@@ -1,0 +1,11 @@
+C:\Users\Sajas\source\repos\IntegratedSystemThakshilawa\IntegratedSystemThakshilawa\bin\Debug\IntegratedSystemThakshilawa.exe.config
+C:\Users\Sajas\source\repos\IntegratedSystemThakshilawa\IntegratedSystemThakshilawa\bin\Debug\IntegratedSystemThakshilawa.exe
+C:\Users\Sajas\source\repos\IntegratedSystemThakshilawa\IntegratedSystemThakshilawa\bin\Debug\IntegratedSystemThakshilawa.pdb
+C:\Users\Sajas\source\repos\IntegratedSystemThakshilawa\IntegratedSystemThakshilawa\obj\Debug\IntegratedSystemThakshilawa.csprojAssemblyReference.cache
+C:\Users\Sajas\source\repos\IntegratedSystemThakshilawa\IntegratedSystemThakshilawa\obj\Debug\IntegratedSystemThakshilawa.Properties.Resources.resources
+C:\Users\Sajas\source\repos\IntegratedSystemThakshilawa\IntegratedSystemThakshilawa\obj\Debug\IntegratedSystemThakshilawa.csproj.GenerateResource.cache
+C:\Users\Sajas\source\repos\IntegratedSystemThakshilawa\IntegratedSystemThakshilawa\obj\Debug\IntegratedSystemThakshilawa.csproj.CoreCompileInputs.cache
+C:\Users\Sajas\source\repos\IntegratedSystemThakshilawa\IntegratedSystemThakshilawa\obj\Debug\IntegratedSystemThakshilawa.exe
+C:\Users\Sajas\source\repos\IntegratedSystemThakshilawa\IntegratedSystemThakshilawa\obj\Debug\IntegratedSystemThakshilawa.pdb
+C:\Users\Sajas\source\repos\IntegratedSystemThakshilawa\IntegratedSystemThakshilawa\obj\Debug\IntegratedSystemThakshilawa.index.resources
+C:\Users\Sajas\source\repos\IntegratedSystemThakshilawa\IntegratedSystemThakshilawa\obj\Debug\IntegratedSystemThakshilawa.Login.resources
