@@ -43,5 +43,22 @@ namespace IntegratedSystemThakshilawa
             managerPanel mp = new managerPanel();
             mp.Show();
         }
+
+        public static void moveToClerkPanel()
+        {
+            clerkPanel cp = new clerkPanel();
+            cp.Show();
+        }
+
+        public static void moveToStudentPayment()
+        {
+            StudentPayment sp = new StudentPayment();
+            sp.Show();
+        }
+        public static void moveToStudentRegistration()
+        {
+            StudentRegistration sr = new StudentRegistration();
+            sr.Show();
+        }
     }
 }

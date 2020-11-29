@@ -40,7 +40,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.comboBoxUserType = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnBacktoHome = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -157,15 +157,15 @@
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
             // 
-            // btnBacktoHome
+            // btnBack
             // 
-            this.btnBacktoHome.Image = global::IntegratedSystemThakshilawa.Properties.Resources.back;
-            this.btnBacktoHome.Location = new System.Drawing.Point(12, 12);
-            this.btnBacktoHome.Name = "btnBacktoHome";
-            this.btnBacktoHome.Size = new System.Drawing.Size(75, 23);
-            this.btnBacktoHome.TabIndex = 0;
-            this.btnBacktoHome.UseVisualStyleBackColor = true;
-            this.btnBacktoHome.Click += new System.EventHandler(this.btnBacktoHome_Click);
+            this.btnBack.Image = global::IntegratedSystemThakshilawa.Properties.Resources.back;
+            this.btnBack.Location = new System.Drawing.Point(24, 309);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(38, 24);
+            this.btnBack.TabIndex = 0;
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBacktoHome_Click);
             // 
             // Login
             // 
@@ -183,7 +183,7 @@
             this.Controls.Add(this.textUsername);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.btnBacktoHome);
+            this.Controls.Add(this.btnBack);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
             this.Text = "Login";
@@ -195,7 +195,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnBacktoHome;
+        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label labelError;
         private System.Windows.Forms.PictureBox pictureBox1;
