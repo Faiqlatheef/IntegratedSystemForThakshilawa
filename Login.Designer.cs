@@ -35,10 +35,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.buttonReset = new System.Windows.Forms.Button();
             this.buttonLogin = new System.Windows.Forms.Button();
-            this.textUsername = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBoxUserType = new System.Windows.Forms.ComboBox();
+            this.userType = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -109,14 +109,14 @@
             this.buttonLogin.UseVisualStyleBackColor = false;
             this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
             // 
-            // textUsername
+            // txtUsername
             // 
-            this.textUsername.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.textUsername.Location = new System.Drawing.Point(335, 105);
-            this.textUsername.Multiline = true;
-            this.textUsername.Name = "textUsername";
-            this.textUsername.Size = new System.Drawing.Size(201, 26);
-            this.textUsername.TabIndex = 6;
+            this.txtUsername.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtUsername.Location = new System.Drawing.Point(335, 105);
+            this.txtUsername.Multiline = true;
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(201, 26);
+            this.txtUsername.TabIndex = 6;
             // 
             // txtPassword
             // 
@@ -139,14 +139,22 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "User Type : ";
             // 
-            // comboBoxUserType
+            // userType
             // 
-            this.comboBoxUserType.FormattingEnabled = true;
-            this.comboBoxUserType.ItemHeight = 13;
-            this.comboBoxUserType.Location = new System.Drawing.Point(338, 214);
-            this.comboBoxUserType.Name = "comboBoxUserType";
-            this.comboBoxUserType.Size = new System.Drawing.Size(198, 21);
-            this.comboBoxUserType.TabIndex = 8;
+            this.userType.FormattingEnabled = true;
+            this.userType.ItemHeight = 13;
+            this.userType.Items.AddRange(new object[] {
+            "admin",
+            "clerk",
+            "owner",
+            "manager",
+            "cafeteria",
+            "lacturer",
+            "hr"});
+            this.userType.Location = new System.Drawing.Point(338, 214);
+            this.userType.Name = "userType";
+            this.userType.Size = new System.Drawing.Size(198, 21);
+            this.userType.TabIndex = 8;
             // 
             // pictureBox1
             // 
@@ -172,7 +180,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(569, 358);
-            this.Controls.Add(this.comboBoxUserType);
+            this.Controls.Add(this.userType);
             this.Controls.Add(this.labelError);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label4);
@@ -180,7 +188,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonReset);
             this.Controls.Add(this.buttonLogin);
-            this.Controls.Add(this.textUsername);
+            this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnBack);
@@ -203,9 +211,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonReset;
         private System.Windows.Forms.Button buttonLogin;
-        private System.Windows.Forms.TextBox textUsername;
+        private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBoxUserType;
+        private System.Windows.Forms.ComboBox userType;
     }
 }

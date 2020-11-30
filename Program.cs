@@ -16,7 +16,7 @@ namespace IntegratedSystemThakshilawa
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new clerkPanel());
+            Application.Run(new index());
         }
     }
 }

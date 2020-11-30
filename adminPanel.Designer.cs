@@ -29,45 +29,214 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(adminPanel));
-            this.buttonLogout = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.rentAmountBtn = new System.Windows.Forms.Button();
+            this.ownerBtn = new System.Windows.Forms.Button();
+            this.resUnitBtn = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.buttonStdRegistration = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.buttonStdPayment = new System.Windows.Forms.Button();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // buttonLogout
+            // label6
             // 
-            this.buttonLogout.Image = ((System.Drawing.Image)(resources.GetObject("buttonLogout.Image")));
-            this.buttonLogout.Location = new System.Drawing.Point(742, 12);
-            this.buttonLogout.Name = "buttonLogout";
-            this.buttonLogout.Size = new System.Drawing.Size(34, 23);
-            this.buttonLogout.TabIndex = 6;
-            this.buttonLogout.UseVisualStyleBackColor = true;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(426, 142);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(0, 13);
+            this.label6.TabIndex = 26;
             // 
-            // btnBack
+            // label5
             // 
-            this.btnBack.Image = global::IntegratedSystemThakshilawa.Properties.Resources.back;
-            this.btnBack.Location = new System.Drawing.Point(26, 414);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(38, 24);
-            this.btnBack.TabIndex = 5;
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(708, 190);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(76, 16);
+            this.label5.TabIndex = 23;
+            this.label5.Text = "Payments";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(521, 190);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(72, 16);
+            this.label4.TabIndex = 24;
+            this.label4.Text = "Lacturers";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(303, 190);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(68, 16);
+            this.label3.TabIndex = 25;
+            this.label3.Text = "Students";
+            // 
+            // rentAmountBtn
+            // 
+            this.rentAmountBtn.BackColor = System.Drawing.Color.Pink;
+            this.rentAmountBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rentAmountBtn.Location = new System.Drawing.Point(683, 226);
+            this.rentAmountBtn.Name = "rentAmountBtn";
+            this.rentAmountBtn.Size = new System.Drawing.Size(162, 79);
+            this.rentAmountBtn.TabIndex = 5;
+            this.rentAmountBtn.UseVisualStyleBackColor = false;
+            // 
+            // ownerBtn
+            // 
+            this.ownerBtn.BackColor = System.Drawing.Color.Pink;
+            this.ownerBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ownerBtn.Location = new System.Drawing.Point(490, 226);
+            this.ownerBtn.Name = "ownerBtn";
+            this.ownerBtn.Size = new System.Drawing.Size(162, 79);
+            this.ownerBtn.TabIndex = 4;
+            this.ownerBtn.UseVisualStyleBackColor = false;
+            // 
+            // resUnitBtn
+            // 
+            this.resUnitBtn.BackColor = System.Drawing.Color.Pink;
+            this.resUnitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resUnitBtn.Location = new System.Drawing.Point(306, 226);
+            this.resUnitBtn.Name = "resUnitBtn";
+            this.resUnitBtn.Size = new System.Drawing.Size(158, 79);
+            this.resUnitBtn.TabIndex = 3;
+            this.resUnitBtn.UseVisualStyleBackColor = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(165, 29);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(268, 24);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "Welcome to Admin Dashboard";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(465, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 20);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "label1";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.groupBox2.Controls.Add(this.button4);
+            this.groupBox2.Controls.Add(this.buttonStdRegistration);
+            this.groupBox2.Controls.Add(this.button5);
+            this.groupBox2.Controls.Add(this.buttonStdPayment);
+            this.groupBox2.Location = new System.Drawing.Point(39, 75);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(198, 383);
+            this.groupBox2.TabIndex = 27;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Clerk Dashboard";
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button4.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(6, 19);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(182, 34);
+            this.button4.TabIndex = 1;
+            this.button4.Text = "Home";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // buttonStdRegistration
+            // 
+            this.buttonStdRegistration.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.buttonStdRegistration.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonStdRegistration.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonStdRegistration.Location = new System.Drawing.Point(6, 59);
+            this.buttonStdRegistration.Name = "buttonStdRegistration";
+            this.buttonStdRegistration.Size = new System.Drawing.Size(182, 34);
+            this.buttonStdRegistration.TabIndex = 2;
+            this.buttonStdRegistration.Text = "Activity Log";
+            this.buttonStdRegistration.UseVisualStyleBackColor = false;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button5.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(6, 331);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(182, 34);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "Logout";
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // buttonStdPayment
+            // 
+            this.buttonStdPayment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.buttonStdPayment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonStdPayment.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonStdPayment.Location = new System.Drawing.Point(6, 99);
+            this.buttonStdPayment.Name = "buttonStdPayment";
+            this.buttonStdPayment.Size = new System.Drawing.Size(182, 34);
+            this.buttonStdPayment.TabIndex = 3;
+            this.buttonStdPayment.Text = "Create User";
+            this.buttonStdPayment.UseVisualStyleBackColor = false;
             // 
             // adminPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.buttonLogout);
-            this.Controls.Add(this.btnBack);
+            this.ClientSize = new System.Drawing.Size(881, 470);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.rentAmountBtn);
+            this.Controls.Add(this.ownerBtn);
+            this.Controls.Add(this.resUnitBtn);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "adminPanel";
             this.Text = "Admin Panel";
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button buttonLogout;
-        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button rentAmountBtn;
+        private System.Windows.Forms.Button ownerBtn;
+        private System.Windows.Forms.Button resUnitBtn;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button buttonStdRegistration;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button buttonStdPayment;
     }
 }

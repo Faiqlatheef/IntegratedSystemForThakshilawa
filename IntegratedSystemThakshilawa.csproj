@@ -54,12 +54,19 @@
     <Compile Include="adminPanel.Designer.cs">
       <DependentUpon>adminPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cafeteria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cafeteria.Designer.cs">
+      <DependentUpon>Cafeteria.cs</DependentUpon>
+    </Compile>
     <Compile Include="clerkPanel.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="clerkPanel.Designer.cs">
       <DependentUpon>clerkPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="connection.cs" />
     <Compile Include="hrPanel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +78,12 @@
     </Compile>
     <Compile Include="index.Designer.cs">
       <DependentUpon>index.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LacturerPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LacturerPanel.Designer.cs">
+      <DependentUpon>LacturerPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -92,6 +105,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegisterUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterUser.Designer.cs">
+      <DependentUpon>RegisterUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="routesForms.cs" />
     <Compile Include="StudentPayment.cs">
       <SubType>Form</SubType>
@@ -108,6 +127,9 @@
     <EmbeddedResource Include="adminPanel.resx">
       <DependentUpon>adminPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Cafeteria.resx">
+      <DependentUpon>Cafeteria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="clerkPanel.resx">
       <DependentUpon>clerkPanel.cs</DependentUpon>
     </EmbeddedResource>
@@ -116,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="index.resx">
       <DependentUpon>index.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LacturerPanel.resx">
+      <DependentUpon>LacturerPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -136,6 +161,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RegisterUser.resx">
+      <DependentUpon>RegisterUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StudentPayment.resx">
       <DependentUpon>StudentPayment.cs</DependentUpon>
     </EmbeddedResource>
