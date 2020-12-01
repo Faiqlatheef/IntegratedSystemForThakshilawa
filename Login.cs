@@ -98,6 +98,10 @@ namespace IntegratedSystemThakshilawa
                 {
                     MessageBox.Show("You have an Error Contect Your Developer" + ex.Message, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                finally
+                {
+                    connect.Close();
+                }
             }
             return;
         }
@@ -142,6 +146,11 @@ namespace IntegratedSystemThakshilawa
         {
             txtUsername.Clear();
             txtPassword.Clear();
+
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
 
         }
     }

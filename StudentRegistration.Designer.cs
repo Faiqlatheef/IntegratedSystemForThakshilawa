@@ -49,6 +49,7 @@
             this.btnReset = new System.Windows.Forms.Button();
             this.btnInsert = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Subject = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtstudentID = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
@@ -56,7 +57,6 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtPhoneNo = new System.Windows.Forms.TextBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
-            this.comboBoxSubject = new System.Windows.Forms.ComboBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.studentDataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -246,6 +246,7 @@
             this.btnReset.TabIndex = 14;
             this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // btnInsert
             // 
@@ -258,11 +259,12 @@
             this.btnInsert.TabIndex = 11;
             this.btnInsert.Text = "Insert";
             this.btnInsert.UseVisualStyleBackColor = true;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.groupBox1.Controls.Add(this.comboBoxSubject);
+            this.groupBox1.Controls.Add(this.Subject);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
@@ -283,6 +285,19 @@
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Student Registartion Form";
+            // 
+            // Subject
+            // 
+            this.Subject.FormattingEnabled = true;
+            this.Subject.Items.AddRange(new object[] {
+            "IT",
+            "Maths",
+            "English",
+            "Sinhalam"});
+            this.Subject.Location = new System.Drawing.Point(160, 280);
+            this.Subject.Name = "Subject";
+            this.Subject.Size = new System.Drawing.Size(144, 24);
+            this.Subject.TabIndex = 10;
             // 
             // label8
             // 
@@ -344,14 +359,6 @@
             this.txtAddress.Size = new System.Drawing.Size(144, 20);
             this.txtAddress.TabIndex = 8;
             // 
-            // comboBoxSubject
-            // 
-            this.comboBoxSubject.FormattingEnabled = true;
-            this.comboBoxSubject.Location = new System.Drawing.Point(160, 280);
-            this.comboBoxSubject.Name = "comboBoxSubject";
-            this.comboBoxSubject.Size = new System.Drawing.Size(144, 24);
-            this.comboBoxSubject.TabIndex = 10;
-            // 
             // StudentRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -406,6 +413,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtstudentID;
         private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.ComboBox comboBoxSubject;
+        private System.Windows.Forms.ComboBox Subject;
     }
 }

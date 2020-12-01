@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(hrPanel));
             this.buttonLogout = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnStdAttendance = new System.Windows.Forms.Button();
             this.btnLecturerAttendance = new System.Windows.Forms.Button();
@@ -45,15 +44,7 @@
             this.buttonLogout.Size = new System.Drawing.Size(34, 23);
             this.buttonLogout.TabIndex = 8;
             this.buttonLogout.UseVisualStyleBackColor = true;
-            // 
-            // btnBack
-            // 
-            this.btnBack.Image = global::IntegratedSystemThakshilawa.Properties.Resources.back;
-            this.btnBack.Location = new System.Drawing.Point(25, 414);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(38, 24);
-            this.btnBack.TabIndex = 7;
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.buttonLogout.Click += new System.EventHandler(this.buttonLogout_Click);
             // 
             // label1
             // 
@@ -112,7 +103,6 @@
             this.Controls.Add(this.btnLecturerAttendance);
             this.Controls.Add(this.btnStdAttendance);
             this.Controls.Add(this.buttonLogout);
-            this.Controls.Add(this.btnBack);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "hrPanel";
             this.Text = "HR Panel";
@@ -124,7 +114,6 @@
         #endregion
 
         private System.Windows.Forms.Button buttonLogout;
-        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnStdAttendance;
         private System.Windows.Forms.Button btnLecturerAttendance;

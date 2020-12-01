@@ -32,8 +32,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.buttonStdRegistration = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.buttonStdPayment = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -42,7 +42,7 @@
             this.ownerBtn = new System.Windows.Forms.Button();
             this.resUnitBtn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lableUsername = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,7 +51,7 @@
             this.groupBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.buttonStdRegistration);
-            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.btnLogout);
             this.groupBox1.Controls.Add(this.buttonStdPayment);
             this.groupBox1.Location = new System.Drawing.Point(62, 108);
             this.groupBox1.Name = "groupBox1";
@@ -86,6 +86,19 @@
             this.buttonStdRegistration.UseVisualStyleBackColor = false;
             this.buttonStdRegistration.Click += new System.EventHandler(this.buttonStdRegistration_Click_1);
             // 
+            // btnLogout
+            // 
+            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLogout.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Location = new System.Drawing.Point(6, 331);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(182, 34);
+            this.btnLogout.TabIndex = 4;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
             // buttonStdPayment
             // 
             this.buttonStdPayment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
@@ -98,18 +111,6 @@
             this.buttonStdPayment.Text = "Student Payment";
             this.buttonStdPayment.UseVisualStyleBackColor = false;
             this.buttonStdPayment.Click += new System.EventHandler(this.buttonStdPayment_Click_1);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(6, 331);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(182, 34);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Logout";
-            this.button2.UseVisualStyleBackColor = false;
             // 
             // label6
             // 
@@ -192,15 +193,15 @@
             this.label2.TabIndex = 35;
             this.label2.Text = "Welcome to Clerk Dashboard";
             // 
-            // label1
+            // lableUsername
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(539, 47);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 20);
-            this.label1.TabIndex = 34;
-            this.label1.Text = "label1";
+            this.lableUsername.AutoSize = true;
+            this.lableUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lableUsername.Location = new System.Drawing.Point(539, 47);
+            this.lableUsername.Name = "lableUsername";
+            this.lableUsername.Size = new System.Drawing.Size(51, 20);
+            this.lableUsername.TabIndex = 34;
+            this.lableUsername.Text = "label1";
             // 
             // clerkPanel
             // 
@@ -209,7 +210,7 @@
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(840, 547);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lableUsername);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -221,6 +222,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "clerkPanel";
             this.Text = "Front End Clerk Panel";
+            this.Load += new System.EventHandler(this.clerkPanel_Load);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -232,7 +234,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button buttonStdRegistration;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button buttonStdPayment;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -242,6 +244,6 @@
         private System.Windows.Forms.Button ownerBtn;
         private System.Windows.Forms.Button resUnitBtn;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lableUsername;
     }
 }

@@ -76,6 +76,7 @@
             this.buttonLogout.Size = new System.Drawing.Size(34, 23);
             this.buttonLogout.TabIndex = 15;
             this.buttonLogout.UseVisualStyleBackColor = true;
+            this.buttonLogout.Click += new System.EventHandler(this.buttonLogout_Click);
             // 
             // Cafeteria
             // 

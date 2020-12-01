@@ -41,7 +41,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button4 = new System.Windows.Forms.Button();
             this.buttonStdRegistration = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.buttonStdPayment = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -143,7 +143,7 @@
             this.groupBox2.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.groupBox2.Controls.Add(this.button4);
             this.groupBox2.Controls.Add(this.buttonStdRegistration);
-            this.groupBox2.Controls.Add(this.button5);
+            this.groupBox2.Controls.Add(this.btnLogout);
             this.groupBox2.Controls.Add(this.buttonStdPayment);
             this.groupBox2.Location = new System.Drawing.Point(39, 75);
             this.groupBox2.Name = "groupBox2";
@@ -176,17 +176,18 @@
             this.buttonStdRegistration.Text = "Activity Log";
             this.buttonStdRegistration.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // btnLogout
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button5.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(6, 331);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(182, 34);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Logout";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLogout.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Location = new System.Drawing.Point(6, 331);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(182, 34);
+            this.btnLogout.TabIndex = 4;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // buttonStdPayment
             // 
@@ -238,7 +239,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button buttonStdRegistration;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button buttonStdPayment;
     }
 }

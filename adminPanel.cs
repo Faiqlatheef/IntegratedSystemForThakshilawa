@@ -31,5 +31,11 @@ namespace IntegratedSystemThakshilawa
         {
             labelUsername.Text = session.getUserData;
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            routesForms.moveToLogin();
+        }
     }
 }
