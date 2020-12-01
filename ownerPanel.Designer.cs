@@ -30,8 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ownerPanel));
             this.btnIncExpReport = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.buttonLogout = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.labelUsername = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnIncExpReport
@@ -45,17 +46,6 @@
             this.btnIncExpReport.Text = "Income and Expenditure Report";
             this.btnIncExpReport.UseVisualStyleBackColor = false;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.label1.Location = new System.Drawing.Point(184, 62);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(336, 32);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Welcome to  Owner  Panel";
-            // 
             // buttonLogout
             // 
             this.buttonLogout.Image = ((System.Drawing.Image)(resources.GetObject("buttonLogout.Image")));
@@ -65,17 +55,39 @@
             this.buttonLogout.TabIndex = 8;
             this.buttonLogout.UseVisualStyleBackColor = true;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(186, 23);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(270, 24);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "Welcome to Owner Dashboard";
+            // 
+            // labelUsername
+            // 
+            this.labelUsername.AutoSize = true;
+            this.labelUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUsername.Location = new System.Drawing.Point(486, 26);
+            this.labelUsername.Name = "labelUsername";
+            this.labelUsername.Size = new System.Drawing.Size(51, 20);
+            this.labelUsername.TabIndex = 20;
+            this.labelUsername.Text = "label3";
+            // 
             // ownerPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelUsername);
             this.Controls.Add(this.btnIncExpReport);
             this.Controls.Add(this.buttonLogout);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ownerPanel";
             this.Text = "Owner Panel";
+            this.Load += new System.EventHandler(this.ownerPanel_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -85,6 +97,7 @@
 
         private System.Windows.Forms.Button buttonLogout;
         private System.Windows.Forms.Button btnIncExpReport;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelUsername;
     }
 }

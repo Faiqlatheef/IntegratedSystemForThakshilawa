@@ -66,6 +66,7 @@
     <Compile Include="clerkPanel.Designer.cs">
       <DependentUpon>clerkPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="commonValitations.cs" />
     <Compile Include="connection.cs" />
     <Compile Include="hrPanel.cs">
       <SubType>Form</SubType>
@@ -112,6 +113,7 @@
       <DependentUpon>RegisterUser.cs</DependentUpon>
     </Compile>
     <Compile Include="routesForms.cs" />
+    <Compile Include="session.cs" />
     <Compile Include="StudentPayment.cs">
       <SubType>Form</SubType>
     </Compile>

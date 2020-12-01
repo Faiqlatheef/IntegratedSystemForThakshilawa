@@ -60,5 +60,15 @@ namespace IntegratedSystemThakshilawa
             StudentRegistration sr = new StudentRegistration();
             sr.Show();
         }
+        public static void moveToLacturerPanel()
+        {
+            LacturerPanel lp = new LacturerPanel();
+            lp.Show();
+        }
+        public static void moveToCafeteriaPanel()
+        {
+            Cafeteria ca = new Cafeteria();
+            ca.Show();
+        }
     }
 }

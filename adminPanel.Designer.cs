@@ -37,7 +37,7 @@
             this.ownerBtn = new System.Windows.Forms.Button();
             this.resUnitBtn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelUsername = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button4 = new System.Windows.Forms.Button();
             this.buttonStdRegistration = new System.Windows.Forms.Button();
@@ -127,15 +127,16 @@
             this.label2.TabIndex = 19;
             this.label2.Text = "Welcome to Admin Dashboard";
             // 
-            // label1
+            // labelUsername
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(465, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 20);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "label1";
+            this.labelUsername.AutoSize = true;
+            this.labelUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUsername.Location = new System.Drawing.Point(465, 32);
+            this.labelUsername.Name = "labelUsername";
+            this.labelUsername.Size = new System.Drawing.Size(51, 20);
+            this.labelUsername.TabIndex = 17;
+            this.labelUsername.Text = "label1";
+            this.labelUsername.Click += new System.EventHandler(this.label1_Click);
             // 
             // groupBox2
             // 
@@ -213,10 +214,11 @@
             this.Controls.Add(this.ownerBtn);
             this.Controls.Add(this.resUnitBtn);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelUsername);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "adminPanel";
             this.Text = "Admin Panel";
+            this.Load += new System.EventHandler(this.adminPanel_Load);
             this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -232,7 +234,7 @@
         private System.Windows.Forms.Button ownerBtn;
         private System.Windows.Forms.Button resUnitBtn;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelUsername;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button buttonStdRegistration;

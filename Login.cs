@@ -13,7 +13,8 @@ namespace IntegratedSystemThakshilawa
 {
     public partial class Login : Form
     {
-        static SqlConnection connect = connection.db;        
+        static SqlConnection connect = connection.db;
+        public static string name;
         public Login()
         {
             InitializeComponent();
@@ -27,57 +28,120 @@ namespace IntegratedSystemThakshilawa
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            try
+            if (isValid())
             {
-                SqlCommand cmd = new SqlCommand("select * from login where username='" + txtUsername.Text + "' and password='" + txtPassword.Text + "'", connect);
-                SqlDataAdapter sda = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
-                string cmbItemValue = userType.SelectedItem.ToString();
-                if (dt.Rows.Count > 0)
+                try
                 {
-                    for (int i = 0; i < dt.Rows.Count; i++)
+                    SqlCommand cmd = new SqlCommand("select * from login where username='" + txtUsername.Text + "' and password='" + txtPassword.Text + "'", connect);
+                    SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
+                    session.getUserData = txtUsername.Text;
+                    string cmbItemValue = userType.SelectedItem.ToString();
+                    if (dt.Rows.Count > 0)
                     {
-
-                        if (dt.Rows[i]["usertype"].ToString() == cmbItemValue) //you can use 2 instead of usertype in that index because usertype column is in 2 index
+                        for (int i = 0; i < dt.Rows.Count; i++)
                         {
 
-                            if (dt.Rows[i]["usertype"].ToString() == "admin")
+                            if (dt.Rows[i]["usertype"].ToString() == cmbItemValue) //you can use 2 instead of usertype in that index because usertype column is in 2 index
                             {
 
-                                this.Hide();
-                                routesForms.moveToAdminPanel();
-                                MessageBox.Show("you are login as " + dt.Rows[i][1]);
-
-
+                                if (dt.Rows[i]["usertype"].ToString() == "admin")
+                                {
+                                    this.Hide();
+                                    routesForms.moveToAdminPanel();
+                                }
+                                else if (dt.Rows[i]["usertype"].ToString() == "clerk")
+                                {
+                                    this.Hide();
+                                    routesForms.moveToClerkPanel();
+                                }
+                                else if (dt.Rows[i]["usertype"].ToString() == "owner")
+                                {
+                                    this.Hide();
+                                    routesForms.moveToOwnerPanel();
+                                }
+                                else if (dt.Rows[i]["usertype"].ToString() == "hr")
+                                {
+                                    this.Hide();
+                                    routesForms.moveToHRPanel();
+                                }
+                                else if (dt.Rows[i]["usertype"].ToString() == "manager")
+                                {
+                                    this.Hide();
+                                    routesForms.moveToManagerPanel();
+                                }
+                                else if (dt.Rows[i]["usertype"].ToString() == "cafeteria")
+                                {
+                                    this.Hide();
+                                    routesForms.moveToCafeteriaPanel();
+                                }
+                                else if (dt.Rows[i]["usertype"].ToString() == "lacturer")
+                                {
+                                    this.Hide();
+                                    routesForms.moveToLacturerPanel();
+                                }
                             }
-                            else if (dt.Rows[i]["usertype"].ToString() == "clerk")
+                            else
                             {
-
-                                this.Hide();
-                                routesForms.moveToClerkPanel();
-
+                                MessageBox.Show("Username or Password is not matched with the roll", "Invalid Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
-                            else if (dt.Rows[i]["usertype"].ToString() == "owner")
-                            {
 
-                                this.Hide();
-                                routesForms.moveToOwnerPanel();
-                            }                        
                         }
-
                     }
-
+                    else
+                    {
+                        MessageBox.Show("Username or Password is not matched with the roll", "Invalid Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("You have an Error Contect Your Developer" + ex.Message, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-            catch(Exception ex)
-            {
-                MessageBox.Show("You have an Error Contect Your Developer" + ex.Message, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            return;
         }
 
+        private bool isValid()
+        {
+            if(txtUsername.Text == string.Empty || txtPassword.Text == string.Empty)
+            {
+                MessageBox.Show("Field can not be empty", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else if (commonValitations.Valid_Name.IsMatch(txtUsername.Text) != true)
+            {
+                MessageBox.Show("Name only alphabetical characters", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (commonValitations.Valid_Name_Limit.IsMatch(txtUsername.Text) != true)
+            {
+                MessageBox.Show("Name should be upto 6 alphabetical characters", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtUsername.Focus();
+                return false;
+            }
+            else if (commonValitations.Valid_Password.IsMatch(txtPassword.Text) != true)
+            {
+                MessageBox.Show("Password must be atleast 8 to 15 characters. It contains atleast one letter and numbers.", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtPassword.Focus();
+                return false;
+            }
+            else if (userType.SelectedItem == null)
+            {
+                MessageBox.Show("Please select a Roll", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                userType.Focus();
+                return false;
+            }
+            return true;
+        }
         private void buttonReset_Click(object sender, EventArgs e)
         {
+            ResetFormController();
+        }
+
+        private void ResetFormController()
+        {
+            txtUsername.Clear();
+            txtPassword.Clear();
 
         }
     }
