@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace IntegratedSystemThakshilawa
 {
-    public partial class managerPanel : Form
+    public partial class RegisterUser : Form
     {
-        public managerPanel()
+        public RegisterUser()
         {
             InitializeComponent();
-        }
-
-        private void buttonLogout_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            routesForms.moveToLogin();
         }
     }
 }

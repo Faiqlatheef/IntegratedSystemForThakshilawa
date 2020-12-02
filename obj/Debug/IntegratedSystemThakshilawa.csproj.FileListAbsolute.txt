@@ -16,3 +16,6 @@ C:\Users\Sajas\source\repos\IntegratedSystemThakshilawa\IntegratedSystemThakshil
 C:\Users\Sajas\source\repos\IntegratedSystemThakshilawa\IntegratedSystemThakshilawa\obj\Debug\IntegratedSystemThakshilawa.ownerPanel.resources
 C:\Users\Sajas\source\repos\IntegratedSystemThakshilawa\IntegratedSystemThakshilawa\obj\Debug\IntegratedSystemThakshilawa.StudentPayment.resources
 C:\Users\Sajas\source\repos\IntegratedSystemThakshilawa\IntegratedSystemThakshilawa\obj\Debug\IntegratedSystemThakshilawa.StudentRegistration.resources
+C:\Users\Sajas\source\repos\IntegratedSystemThakshilawa\IntegratedSystemThakshilawa\obj\Debug\IntegratedSystemThakshilawa.Cafeteria.resources
+C:\Users\Sajas\source\repos\IntegratedSystemThakshilawa\IntegratedSystemThakshilawa\obj\Debug\IntegratedSystemThakshilawa.LacturerPanel.resources
+C:\Users\Sajas\source\repos\IntegratedSystemThakshilawa\IntegratedSystemThakshilawa\obj\Debug\IntegratedSystemThakshilawa.RegisterUser.resources

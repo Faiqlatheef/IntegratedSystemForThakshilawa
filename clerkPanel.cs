@@ -33,5 +33,33 @@ namespace IntegratedSystemThakshilawa
             this.Hide();
             routesForms.moveToStudentPayment();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonStdRegistration_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            routesForms.moveToStudentRegistration();
+        }
+
+        private void buttonStdPayment_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            routesForms.moveToStudentPayment();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            routesForms.moveToLogin();
+        }
+
+        private void clerkPanel_Load(object sender, EventArgs e)
+        {
+            lableUsername.Text = session.getUserData; 
+        }
     }
 }

@@ -36,7 +36,6 @@
             this.btnSort = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.txtSearchID = new System.Windows.Forms.TextBox();
-            this.btnSearchID = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -49,6 +48,7 @@
             this.btnReset = new System.Windows.Forms.Button();
             this.btnInsert = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Subject = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtstudentID = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
@@ -56,7 +56,6 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtPhoneNo = new System.Windows.Forms.TextBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
-            this.comboBoxSubject = new System.Windows.Forms.ComboBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.studentDataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -92,6 +91,7 @@
             this.btnDelete.TabIndex = 13;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -104,6 +104,7 @@
             this.btnUpdate.TabIndex = 12;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnSort
             // 
@@ -113,6 +114,7 @@
             this.btnSort.Size = new System.Drawing.Size(75, 23);
             this.btnSort.TabIndex = 17;
             this.btnSort.UseVisualStyleBackColor = true;
+            this.btnSort.Click += new System.EventHandler(this.btnSort_Click);
             // 
             // label7
             // 
@@ -127,17 +129,9 @@
             // 
             this.txtSearchID.Location = new System.Drawing.Point(140, 27);
             this.txtSearchID.Name = "txtSearchID";
-            this.txtSearchID.Size = new System.Drawing.Size(100, 22);
+            this.txtSearchID.Size = new System.Drawing.Size(148, 22);
             this.txtSearchID.TabIndex = 15;
-            // 
-            // btnSearchID
-            // 
-            this.btnSearchID.Image = ((System.Drawing.Image)(resources.GetObject("btnSearchID.Image")));
-            this.btnSearchID.Location = new System.Drawing.Point(271, 26);
-            this.btnSearchID.Name = "btnSearchID";
-            this.btnSearchID.Size = new System.Drawing.Size(75, 23);
-            this.btnSearchID.TabIndex = 16;
-            this.btnSearchID.UseVisualStyleBackColor = true;
+            this.txtSearchID.TextChanged += new System.EventHandler(this.txtSearchID_TextChanged);
             // 
             // label6
             // 
@@ -197,6 +191,7 @@
             this.btnReload.Size = new System.Drawing.Size(75, 23);
             this.btnReload.TabIndex = 18;
             this.btnReload.UseVisualStyleBackColor = true;
+            this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
             // 
             // groupBox2
             // 
@@ -205,7 +200,6 @@
             this.groupBox2.Controls.Add(this.btnSort);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.txtSearchID);
-            this.groupBox2.Controls.Add(this.btnSearchID);
             this.groupBox2.Controls.Add(this.studentDataGridView);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(399, 61);
@@ -223,6 +217,7 @@
             this.studentDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.studentDataGridView.Size = new System.Drawing.Size(531, 275);
             this.studentDataGridView.TabIndex = 12;
+            this.studentDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.studentDataGridView_CellClick);
             // 
             // label1
             // 
@@ -246,6 +241,7 @@
             this.btnReset.TabIndex = 14;
             this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // btnInsert
             // 
@@ -258,11 +254,12 @@
             this.btnInsert.TabIndex = 11;
             this.btnInsert.Text = "Insert";
             this.btnInsert.UseVisualStyleBackColor = true;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.groupBox1.Controls.Add(this.comboBoxSubject);
+            this.groupBox1.Controls.Add(this.Subject);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
@@ -283,6 +280,20 @@
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Student Registartion Form";
+            // 
+            // Subject
+            // 
+            this.Subject.FormattingEnabled = true;
+            this.Subject.Items.AddRange(new object[] {
+            "IT",
+            "Maths",
+            "English",
+            "Sinhalam"});
+            this.Subject.Location = new System.Drawing.Point(160, 280);
+            this.Subject.Name = "Subject";
+            this.Subject.Size = new System.Drawing.Size(144, 24);
+            this.Subject.TabIndex = 10;
+            this.Subject.Text = "select one";
             // 
             // label8
             // 
@@ -344,14 +355,6 @@
             this.txtAddress.Size = new System.Drawing.Size(144, 20);
             this.txtAddress.TabIndex = 8;
             // 
-            // comboBoxSubject
-            // 
-            this.comboBoxSubject.FormattingEnabled = true;
-            this.comboBoxSubject.Location = new System.Drawing.Point(160, 280);
-            this.comboBoxSubject.Name = "comboBoxSubject";
-            this.comboBoxSubject.Size = new System.Drawing.Size(144, 24);
-            this.comboBoxSubject.TabIndex = 10;
-            // 
             // StudentRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -368,6 +371,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "StudentRegistration";
             this.Text = "StudentRegistration";
+            this.Load += new System.EventHandler(this.StudentRegistration_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.studentDataGridView)).EndInit();
@@ -386,7 +390,6 @@
         private System.Windows.Forms.Button btnSort;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtSearchID;
-        private System.Windows.Forms.Button btnSearchID;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -406,6 +409,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtstudentID;
         private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.ComboBox comboBoxSubject;
+        private System.Windows.Forms.ComboBox Subject;
     }
 }

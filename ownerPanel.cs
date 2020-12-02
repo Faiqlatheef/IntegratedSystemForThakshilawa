@@ -16,5 +16,16 @@ namespace IntegratedSystemThakshilawa
         {
             InitializeComponent();
         }
+
+        private void ownerPanel_Load(object sender, EventArgs e)
+        {
+            labelUsername.Text = session.getUserData;
+        }
+
+        private void buttonLogout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            routesForms.moveToLogin();
+        }
     }
 }

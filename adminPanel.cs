@@ -19,7 +19,23 @@ namespace IntegratedSystemThakshilawa
 
         private void btnBacktoHome_Click(object sender, EventArgs e)
         {
+            
+        }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void adminPanel_Load(object sender, EventArgs e)
+        {
+            labelUsername.Text = session.getUserData;
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            routesForms.moveToLogin();
         }
     }
 }
