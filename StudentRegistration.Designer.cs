@@ -36,7 +36,6 @@
             this.btnSort = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.txtSearchID = new System.Windows.Forms.TextBox();
-            this.btnSearchID = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -92,6 +91,7 @@
             this.btnDelete.TabIndex = 13;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -104,6 +104,7 @@
             this.btnUpdate.TabIndex = 12;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnSort
             // 
@@ -113,6 +114,7 @@
             this.btnSort.Size = new System.Drawing.Size(75, 23);
             this.btnSort.TabIndex = 17;
             this.btnSort.UseVisualStyleBackColor = true;
+            this.btnSort.Click += new System.EventHandler(this.btnSort_Click);
             // 
             // label7
             // 
@@ -127,17 +129,9 @@
             // 
             this.txtSearchID.Location = new System.Drawing.Point(140, 27);
             this.txtSearchID.Name = "txtSearchID";
-            this.txtSearchID.Size = new System.Drawing.Size(100, 22);
+            this.txtSearchID.Size = new System.Drawing.Size(148, 22);
             this.txtSearchID.TabIndex = 15;
-            // 
-            // btnSearchID
-            // 
-            this.btnSearchID.Image = ((System.Drawing.Image)(resources.GetObject("btnSearchID.Image")));
-            this.btnSearchID.Location = new System.Drawing.Point(271, 26);
-            this.btnSearchID.Name = "btnSearchID";
-            this.btnSearchID.Size = new System.Drawing.Size(75, 23);
-            this.btnSearchID.TabIndex = 16;
-            this.btnSearchID.UseVisualStyleBackColor = true;
+            this.txtSearchID.TextChanged += new System.EventHandler(this.txtSearchID_TextChanged);
             // 
             // label6
             // 
@@ -197,6 +191,7 @@
             this.btnReload.Size = new System.Drawing.Size(75, 23);
             this.btnReload.TabIndex = 18;
             this.btnReload.UseVisualStyleBackColor = true;
+            this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
             // 
             // groupBox2
             // 
@@ -205,7 +200,6 @@
             this.groupBox2.Controls.Add(this.btnSort);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.txtSearchID);
-            this.groupBox2.Controls.Add(this.btnSearchID);
             this.groupBox2.Controls.Add(this.studentDataGridView);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(399, 61);
@@ -223,6 +217,7 @@
             this.studentDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.studentDataGridView.Size = new System.Drawing.Size(531, 275);
             this.studentDataGridView.TabIndex = 12;
+            this.studentDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.studentDataGridView_CellClick);
             // 
             // label1
             // 
@@ -298,6 +293,7 @@
             this.Subject.Name = "Subject";
             this.Subject.Size = new System.Drawing.Size(144, 24);
             this.Subject.TabIndex = 10;
+            this.Subject.Text = "select one";
             // 
             // label8
             // 
@@ -375,6 +371,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "StudentRegistration";
             this.Text = "StudentRegistration";
+            this.Load += new System.EventHandler(this.StudentRegistration_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.studentDataGridView)).EndInit();
@@ -393,7 +390,6 @@
         private System.Windows.Forms.Button btnSort;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtSearchID;
-        private System.Windows.Forms.Button btnSearchID;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;

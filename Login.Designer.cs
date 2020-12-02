@@ -155,6 +155,7 @@
             this.userType.Name = "userType";
             this.userType.Size = new System.Drawing.Size(198, 21);
             this.userType.TabIndex = 8;
+            this.userType.Text = "select a roll";
             // 
             // pictureBox1
             // 
