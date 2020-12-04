@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Net;
+using System.Net.Mail;
 
 namespace IntegratedSystemThakshilawa
 {
@@ -111,8 +113,10 @@ namespace IntegratedSystemThakshilawa
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            ResetFormController();
-            txtName.Focus();
+            //  ResetFormController();
+            //txtName.Focus();
+
+            Email();
         }
 
         private bool isValid()
@@ -214,6 +218,35 @@ namespace IntegratedSystemThakshilawa
         private void btnReload_Click(object sender, EventArgs e)
         {
             _dataGridView();
+        }
+
+        public static void Email()
+        {
+            MailAddress to = new MailAddress("sajasm7@gmail.com");
+            // MailAddress from = new MailAddress("sajasm7@mailtrap.io");
+            MailAddress from = new MailAddress("sourcec19@gmail.com");
+
+            MailMessage message = new MailMessage(from, to);
+            message.Subject = "Good morning, Elizabeth";
+            message.Body = "Elizabeth, Long time no talk. Would you be up for lunch in Soho on Monday? I'm paying.;";
+
+            // SmtpClient client = new SmtpClient("smtp.mailtrap.io", 2525)
+            SmtpClient client = new SmtpClient("smtp.gmail.com", 587)
+            {
+                Credentials = new NetworkCredential("sourcec19@gmail.com", "*3Source@321$"),
+                EnableSsl = true
+            };
+            // code in brackets above needed if authentication required 
+
+            try
+            {
+                client.Send(message);
+                MessageBox.Show("Maill Sended");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }            
         }
     }
 }
