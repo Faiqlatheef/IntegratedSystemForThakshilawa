@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Net;
+using System.Net.Mail;
 
 namespace IntegratedSystemThakshilawa
 {
@@ -31,6 +33,7 @@ namespace IntegratedSystemThakshilawa
             if (isValid())
             {
                 enumFunction.DBFunction("insert into students(name, nic, phoneno, address, email, subject)values('" + txtName.Text + "', '" + txtNIC.Text + "', '" + txtPhoneNo.Text + "', '" + txtAddress.Text + "', '" + txtEmail.Text + "', '" + Subject.SelectedItem + "')", enumFunction._enumtype.insert);
+                Email();
                 ResetFormController();
                 _dataGridView();
                 txtName.Focus();
@@ -182,11 +185,6 @@ namespace IntegratedSystemThakshilawa
             studentDataGridView.Sort(studentDataGridView.Columns[0], ListSortDirection.Ascending);
         }
 
-        private void btnSearchID_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtSearchID_TextChanged(object sender, EventArgs e)
         {
             try
@@ -214,6 +212,35 @@ namespace IntegratedSystemThakshilawa
         private void btnReload_Click(object sender, EventArgs e)
         {
             _dataGridView();
+
+        }
+
+        public void Email()
+        {
+            
+            MailAddress to = new MailAddress("'sajasm7@gmail.com', 'sajasam97@gmail.com'");
+            MailAddress from = new MailAddress("sourcec19@gmail.com");
+
+            MailMessage message = new MailMessage(from, to);
+            message.Subject = "New Student Registration to '"+Subject.SelectedItem+"' Class";
+            message.Body = "Name : "+txtName.Text+"  NIC : "+txtNIC.Text+" Email: "+txtEmail.Text+"";
+
+            SmtpClient client = new SmtpClient("smtp.gmail.com", 587)
+            {   
+                Credentials = new NetworkCredential("sourcec19@gmail.com", "*3Source@321$"),
+                EnableSsl = true
+            };
+            // code in brackets above needed if authentication required 
+
+            try
+            {
+                client.Send(message);
+                MessageBox.Show("Maill Sended");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }            
         }
     }
 }
