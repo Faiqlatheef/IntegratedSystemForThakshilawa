@@ -33,6 +33,7 @@ namespace IntegratedSystemThakshilawa
             if (isValid())
             {
                 enumFunction.DBFunction("insert into students(name, nic, phoneno, address, email, subject)values('" + txtName.Text + "', '" + txtNIC.Text + "', '" + txtPhoneNo.Text + "', '" + txtAddress.Text + "', '" + txtEmail.Text + "', '" + Subject.SelectedItem + "')", enumFunction._enumtype.insert);
+                Email();
                 ResetFormController();
                 _dataGridView();
                 txtName.Focus();
@@ -113,10 +114,8 @@ namespace IntegratedSystemThakshilawa
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            //  ResetFormController();
-            //txtName.Focus();
-
-            Email();
+            ResetFormController();
+            txtName.Focus();
         }
 
         private bool isValid()
@@ -186,11 +185,6 @@ namespace IntegratedSystemThakshilawa
             studentDataGridView.Sort(studentDataGridView.Columns[0], ListSortDirection.Ascending);
         }
 
-        private void btnSearchID_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtSearchID_TextChanged(object sender, EventArgs e)
         {
             try
@@ -218,21 +212,21 @@ namespace IntegratedSystemThakshilawa
         private void btnReload_Click(object sender, EventArgs e)
         {
             _dataGridView();
+
         }
 
-        public static void Email()
+        public void Email()
         {
-            MailAddress to = new MailAddress("sajasm7@gmail.com");
-            // MailAddress from = new MailAddress("sajasm7@mailtrap.io");
+            
+            MailAddress to = new MailAddress("'sajasm7@gmail.com', 'sajasam97@gmail.com'");
             MailAddress from = new MailAddress("sourcec19@gmail.com");
 
             MailMessage message = new MailMessage(from, to);
-            message.Subject = "Good morning, Elizabeth";
-            message.Body = "Elizabeth, Long time no talk. Would you be up for lunch in Soho on Monday? I'm paying.;";
+            message.Subject = "New Student Registration to '"+Subject.SelectedItem+"' Class";
+            message.Body = "Name : "+txtName.Text+"  NIC : "+txtNIC.Text+" Email: "+txtEmail.Text+"";
 
-            // SmtpClient client = new SmtpClient("smtp.mailtrap.io", 2525)
             SmtpClient client = new SmtpClient("smtp.gmail.com", 587)
-            {
+            {   
                 Credentials = new NetworkCredential("sourcec19@gmail.com", "*3Source@321$"),
                 EnableSsl = true
             };
